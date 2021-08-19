@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73596ac63604fa14b81978f6284efbe8, type: 3}
+  m_Name: NewsPapper
+  m_EditorClassIdentifier: 
+  Name: "\u0413\u0430\u0437\u0435\u0442\u0430"
+  Picture: {fileID: 21300000, guid: 62939c33160592c48ae8c3a651bba487, type: 3}
+  Id: 2
+  destroyEvent: {fileID: 11400000, guid: bee43ae9c3001864784fcd5c94293851, type: 2}
