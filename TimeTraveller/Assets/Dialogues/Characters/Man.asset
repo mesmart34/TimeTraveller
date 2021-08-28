@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: {r: 0.6886792, g: 0.2658143, b: 0, a: 0}
   name: "\u041C\u0443\u0436\u0447\u0438\u043D\u0430"
-  Avatar: {fileID: 21300000, guid: 20607286884d7f240a111160a4cd1b3e, type: 3}
+  Avatar: {fileID: 21300000, guid: c50ba7719c037244691cc64b52aadd7e, type: 3}

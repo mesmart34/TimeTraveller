@@ -17,6 +17,7 @@ public class EventManager : MonoBehaviour
     [SerializeField] private Inventory inventory;
     [SerializeField] private SubtitleSystem subtitleSystem;
     [SerializeField] private DiarySystem diarySystem;
+    [SerializeField] private FactSystem factSystem;
 
     private void Awake() {
          if(instance == null)
@@ -31,13 +32,29 @@ public class EventManager : MonoBehaviour
 
     public void TakeItem(ItemBase item)
     {
-        QuestManager.instance.PushEvent(QuestGoal.TakeItem, 0);
+        QuestManager.instance.PushEvent(QuestGoal.TakeItem, item.Id);
          var playerController = player.GetComponent<PlayerController>();
             playerController.SetTarget(transform.position);
             playerController.SetArrivalEvent(()=>{
                 inventory.Add(item);
                 item.destroyEvent.Raise();
             });
+    }
+
+    public void SayFact(SubtitleTrack fact)
+    {
+        var playerController = player.GetComponent<PlayerController>();
+            playerController.SetTarget(transform.position);
+            playerController.SetArrivalEvent(()=>{
+                factSystem.SetText(fact);
+                factSystem.Open();
+            });
+        
+    }
+
+    public void CloseFact()
+    {
+        factSystem.Close();
     }
 
     public void TriggerTeleport(int id)
@@ -128,6 +145,20 @@ public class EventManager : MonoBehaviour
         QuestManager.instance.PushEvent(QuestGoal.TalkTo, 0);
         dialogueUI.SetActive(true);
         SetPlayerBusy(true);
+    }
+
+    public void StartDialogeWithDelay(float delay)
+    {
+        StartCoroutine(DialogueWithDelayCoroutine(delay));
+    }
+
+    private IEnumerator DialogueWithDelayCoroutine(float delay)
+    {
+        SetPlayerBusy(true);
+        yield return new WaitForSeconds(delay);
+        QuestManager.instance.PushEvent(QuestGoal.TalkTo, 0);
+        dialogueUI.SetActive(true);
+
     }
 
     public void EndDialgoue(bool alarmQuestSystem)

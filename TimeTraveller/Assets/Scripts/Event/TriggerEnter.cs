@@ -9,6 +9,7 @@ public class TriggerEnter : MonoBehaviour
     [SerializeField] private UnityEvent onEnterTrigger;
 
     private void OnTriggerEnter2D(Collider2D other) {
+        print(other.gameObject.name);
         if(other.gameObject.tag == colliderTag)
         {
             onEnterTrigger.Invoke();

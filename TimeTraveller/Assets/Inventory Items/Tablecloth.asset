@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73596ac63604fa14b81978f6284efbe8, type: 3}
+  m_Name: Tablecloth
+  m_EditorClassIdentifier: 
+  Name: "\u0421\u043A\u0430\u0442\u0435\u0440\u0442\u044C"
+  Picture: {fileID: 21300000, guid: 984ee2e56d1dad840a6d9ef40733edb1, type: 3}
+  Id: 2
+  destroyEvent: {fileID: 11400000, guid: 3eac7914a451a6040b229c2ff98c2e1b, type: 2}

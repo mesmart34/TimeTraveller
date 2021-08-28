@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Name: Event
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 728, y: 520}
+  position: {x: 648, y: 504}
   ports:
     keys:
     - input
