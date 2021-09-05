@@ -101,6 +101,7 @@ public class EventManager : MonoBehaviour
 
     private IEnumerator LoadScene(float time)
     {
+        PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex);
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

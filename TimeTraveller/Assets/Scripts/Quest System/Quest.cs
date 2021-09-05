@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public enum QuestGoal
 {
-    EnterArea, TakeItem, TalkTo, TalkedTo, GiveItem, DropItem, UseItem, UseEntity, ChangeLocation, HasItem, LookAt, ThoughtShowed
+    EnterArea, TakeItem, TalkTo, TalkedTo, GiveItem, DropItem, UseItem, UseEntity, ChangeLocation, HasItem, LookAt, ThoughtShowed, DiaryClosed
 }
 
 [System.Serializable]

@@ -14,6 +14,7 @@ public class EnterArea : MonoBehaviour
     {
         if(this.id == id)
         {
+            print(id);
             onEnterTrigger.Invoke();
         }
     }

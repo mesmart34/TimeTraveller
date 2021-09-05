@@ -15,6 +15,13 @@ public class StartScreen : MonoBehaviour
         EventManager.instance.SetPlayerBusy(true);
     }
 
+    public void StartTyping()
+    {
+        // StartCoroutine(TypeText());
+        // EventManager.instance.SetPlayerBusy(true);
+    }
+
+
     private IEnumerator TypeText()
     {
         foreach(var c in text)

@@ -23,7 +23,6 @@ public class QuestManager : MonoBehaviour
 
     public void PushEvent(QuestGoal goal, int value = 0) 
     {
-        print(value);
         if(currentQuest == null)
             return;
         if(currentQuest.info.goal == goal)
